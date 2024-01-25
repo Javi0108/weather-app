@@ -6,12 +6,14 @@ const CityComponent = (props) => {
     <>
       <img src={"../icons/sun.svg"} className="welcomeWeatherLogo" />
       <span className="chooseCityLabel">Find Weather of your city</span>
-      <form className="searchBox"  onSubmit={fetchWeather}>
+      <form className="searchBox" onSubmit={fetchWeather}>
         <input
           onChange={(e) => updateCity(e.target.value)}
           placeholder="City"
         />
-        <button type={"submit"}>Search</button>
+        <button type={"submit"}>
+            <img src={"../icons/search.svg"} />
+        </button>
       </form>
     </>
   );
